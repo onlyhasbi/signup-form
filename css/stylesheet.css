@@ -1,0 +1,253 @@
+@import url("./normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /* --- Primary --- */
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  /* --- Accent --- */
+  --Blue: hsl(248, 32%, 49%);
+
+  /* --- Neutral --- */
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html,
+body {
+  font-size: 62.5%;
+  font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.75rem;
+  margin-top: 0;
+}
+
+p {
+  font-size: 1.55rem;
+}
+
+body {
+  background-color: var(--Red);
+  background-image: url("../images/bg-intro-mobile.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  max-height: 100%;
+}
+
+.container {
+  padding-top: 8.8rem;
+  padding-bottom: 6.8rem;
+  width: 100%;
+  max-width: 32.7rem;
+  margin: 0 auto;
+}
+
+.header {
+  color: var(--white);
+  text-align: center;
+}
+
+.header__title {
+  margin-bottom: 2.1rem;
+  line-height: 3.7rem;
+}
+
+.header__text {
+  line-height: 2.6rem;
+  letter-spacing: 0.28px;
+  margin-bottom: 6.8rem;
+}
+
+.ads {
+  background: var(--Blue);
+  margin-bottom: 2.4rem;
+  color: var(--white);
+  padding: 2rem 8rem;
+  line-height: 25.5px;
+  border-radius: 0.9rem;
+  box-shadow: 0 0.8rem 0 0 hsla(0, 0%, 0%, 0.1);
+  text-align: center;
+}
+
+.ads .highlight {
+  font-weight: 600;
+}
+
+.form-group {
+  width: 100%;
+  max-width: 32.7rem;
+}
+
+.form-group,
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  background: var(--white);
+  padding: 2.4rem;
+  border-radius: 0.9rem;
+  box-shadow: 0 0.8rem 0 0 hsla(0, 0%, 0%, 0.1);
+}
+
+.input {
+  padding: 1.6rem 1.9rem;
+  padding-right: 2.5rem;
+  font-size: 1.45rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: 1px solid #dedede;
+  outline: 0;
+  color: var(--Dark-Blue);
+  margin-top: 1.6rem;
+}
+
+.input::placeholder {
+  color: #6c6b70;
+}
+
+.input:focus {
+  border-color: var(--Dark-Blue);
+}
+
+.input:first-child {
+  margin-top: 0;
+}
+
+.error {
+  display: block !important;
+}
+
+.message {
+  color: var(--Red);
+  font-size: 1.05rem;
+  font-weight: 500;
+  font-style: italic;
+  margin-top: 0.8rem;
+  text-align: right;
+  display: none;
+}
+
+.alert-icon {
+  content: "";
+  background: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: right 2.45rem center;
+  border-color: var(--Red);
+}
+
+.alert-icon::placeholder {
+  color: var(--Red);
+}
+
+.btn-submit {
+  border-radius: 0.5rem;
+  border: 0;
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-top: 1.7rem;
+  outline: 0;
+  padding: 1.9rem 0;
+  text-transform: uppercase;
+  background: var(--Green);
+  box-shadow: 0 0.4rem 0 0 #30bb7d;
+}
+
+.btn-submit:hover {
+  background: #77e2b4;
+  box-shadow: 0 0.4rem 0 0 #6acea1;
+}
+
+.terms {
+  font-size: 1.05rem;
+  margin-top: 1.3rem;
+  letter-spacing: 0.25px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--Grayish-Blue);
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
+}
+
+.terms .highlight {
+  color: var(--Red);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url("../images/bg-intro-desktop.png");
+  }
+
+  .header {
+    text-align: left;
+  }
+
+  .header__title {
+    font-size: 5rem;
+    line-height: 5.55rem;
+    letter-spacing: -0.5px;
+    margin-top: 0;
+  }
+
+  .header__text {
+    font-size: 1.5rem;
+    line-height: 25.5px;
+    letter-spacing: 0.27px;
+  }
+
+  .container {
+    padding-top: 12rem;
+    padding-bottom: 11.3rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 50.4rem 54rem;
+    gap: 6.5rem;
+  }
+
+  .header {
+    width: 100%;
+    max-width: 48.3rem;
+    color: var(--white);
+    justify-self: end;
+  }
+
+  .header__text {
+    margin-bottom: 0;
+  }
+
+  .ads {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .form-group {
+    width: 100%;
+    max-width: 51.26rem;
+    justify-self: start;
+  }
+
+  .form {
+    padding: 4rem;
+  }
+
+  .input + .input {
+    margin-top: 2rem;
+  }
+
+  .terms {
+    padding: 0;
+  }
+}
