@@ -3,7 +3,7 @@ const message = document.querySelectorAll(".message");
 const form = document.querySelector(".form");
 
 const isEmpty = (value) => {
-  return (result = !value.trim().length);
+  return !value.trim().length;
 };
 
 input.forEach((item, i) => {
