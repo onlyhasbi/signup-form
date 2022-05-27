@@ -37,17 +37,16 @@ p {
 body {
   background-color: var(--Red);
   background-image: url("../images/bg-intro-mobile.png");
+  background-position: center top;
   background-repeat: no-repeat;
   width: 100%;
-  max-height: 100%;
+  min-height: 100%;
 }
 
 .container {
-  padding-top: 8.8rem;
-  padding-bottom: 6.8rem;
   width: 100%;
   max-width: 32.7rem;
-  margin: 0 auto;
+  margin: 9.1rem auto 6.85rem;
 }
 
 .header {
@@ -56,24 +55,24 @@ body {
 }
 
 .header__title {
-  margin-bottom: 2.1rem;
-  line-height: 3.7rem;
+  margin-bottom: 2.2rem;
+  line-height: 3.6rem;
 }
 
 .header__text {
   line-height: 2.6rem;
   letter-spacing: 0.28px;
-  margin-bottom: 6.8rem;
+  margin-bottom: 6.2rem;
 }
 
 .ads {
   background: var(--Blue);
   margin-bottom: 2.4rem;
   color: var(--white);
-  padding: 2rem 8rem;
-  line-height: 25.5px;
+  padding: 1.75rem 5rem;
+  line-height: 27px;
   border-radius: 0.9rem;
-  box-shadow: 0 0.8rem 0 0 hsla(0, 0%, 0%, 0.1);
+  box-shadow: 0 0.75rem 0 0 hsla(0, 0%, 0%, 0.1);
   text-align: center;
 }
 
@@ -94,25 +93,25 @@ body {
 
 .form {
   background: var(--white);
-  padding: 2.4rem;
-  border-radius: 0.9rem;
+  padding: 2.4rem 2.4rem 2.2rem;
+  border-radius: 1rem;
   box-shadow: 0 0.8rem 0 0 hsla(0, 0%, 0%, 0.1);
 }
 
 .input {
-  padding: 1.6rem 1.9rem;
-  padding-right: 2.5rem;
-  font-size: 1.45rem;
+  padding: 1.7rem 2.5rem 1.6rem 1.8rem;
+  font-size: 1.4rem;
   font-weight: 600;
   border-radius: 0.5rem;
   border: 1px solid #dedede;
   outline: 0;
   color: var(--Dark-Blue);
-  margin-top: 1.6rem;
+  margin-top: 1.51rem;
 }
 
 .input::placeholder {
-  color: #6c6b70;
+  color: var(--Dark-Blue);
+  opacity: 0.7;
 }
 
 .input:focus {
@@ -154,11 +153,11 @@ body {
   border: 0;
   color: var(--white);
   font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  margin-top: 1.7rem;
+  letter-spacing: 0.25px;
+  margin-top: 1.45rem;
   outline: 0;
-  padding: 1.9rem 0;
+  padding-top: 1.95rem;
+  padding-bottom: 1.45rem;
   text-transform: uppercase;
   background: var(--Green);
   box-shadow: 0 0.4rem 0 0 #30bb7d;
@@ -190,41 +189,36 @@ body {
     background-image: url("../images/bg-intro-desktop.png");
   }
 
+  .container {
+    max-width: 111rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12rem auto;
+  }
+
+  .form-group {
+    max-width: 54rem !important;
+  }
+
   .header {
     text-align: left;
+    max-width: 50rem;
+    margin-right: auto;
   }
 
   .header__title {
     font-size: 5rem;
-    line-height: 5.55rem;
+    line-height: 5.5rem;
     letter-spacing: -0.5px;
-    margin-top: 0;
+    margin-top: 0.65rem;
   }
 
   .header__text {
-    font-size: 1.5rem;
+    font-size: 1.55rem;
     line-height: 25.5px;
-    letter-spacing: 0.27px;
-  }
-
-  .container {
-    padding-top: 12rem;
-    padding-bottom: 11.3rem;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    grid-template-columns: 50.4rem 54rem;
-    gap: 6.5rem;
-  }
-
-  .header {
-    width: 100%;
-    max-width: 48.3rem;
-    color: var(--white);
-    justify-self: end;
-  }
-
-  .header__text {
+    letter-spacing: 0.3px;
+    margin-top: 2.8rem;
     margin-bottom: 0;
   }
 
@@ -233,21 +227,23 @@ body {
     padding-right: 0;
   }
 
-  .form-group {
-    width: 100%;
-    max-width: 51.26rem;
-    justify-self: start;
-  }
-
   .form {
     padding: 4rem;
   }
 
-  .input + .input {
+  .input {
+    padding: 1.65rem 2.5rem 1.4rem 3.15rem;
+    font-size: 1.4rem;
+    margin-top: 2.15rem;
+  }
+
+  .btn-submit {
     margin-top: 2rem;
+    font-weight: 500;
   }
 
   .terms {
     padding: 0;
+    margin-top: 1.7rem;
   }
 }
